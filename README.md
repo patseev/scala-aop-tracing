@@ -21,3 +21,10 @@ It's based on
 - Check out example of generated traces in `traces-full.log`
 - Check out traced repository implementation in `PetRepository.scala`
 - Check out Tracing implementation in `Tracing.scala`
+
+There are multiple concerns:
+
+- What if you don't want to include all arguments? What if they're too big?
+- What if arguments contain sensitive data?
+
+You can solve this by defining custom instances of `Show` or some other typeclass for displaying. It adds complexity and kinda defeats the purpose. Maybe there's a better solution.
