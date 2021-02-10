@@ -28,3 +28,5 @@ There are multiple concerns:
 - What if arguments contain sensitive data?
 
 You can solve this by defining custom instances of `Show` or some other typeclass for displaying. It adds complexity and kinda defeats the purpose. Maybe there's a better solution.
+
+Additionally: this doesn't replace use of tracer inside of implementation if you need to add some custom info to the span, it's just a smart way of constructing spans "invisibly", so you never have to think about it again
