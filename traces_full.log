@@ -1,0 +1,131 @@
+[info] running aop.Main
+2021-02-10T20:08:04,32 [ioapp-compute-0] INFO natchez.logodin.LogSpan.finish:137 -
+{
+  "name" : "program",
+  "service" : "app",
+  "timestamp" : "2021-02-10T17:08:03.931963Z",
+  "duration_ms" : 90,
+  "trace.span_id" : "4961b161-3951-4704-a6da-66955648cd82",
+  "trace.parent_id" : null,
+  "trace.trace_id" : "92149010-e2fc-43e6-a215-bbbd0f32427a",
+  "exit.case" : "error",
+  "exit.error.class" : "java.lang.RuntimeException",
+  "exit.error.message" : "Pet Pet2 is not found",
+  "exit.error.stackTrace" : [
+    "aop.InMemoryPetRepository$$anonfun$make$2$$anon$4$$anonfun$get$1.apply(PetRepository.scala:42)",
+    "aop.InMemoryPetRepository$$anonfun$make$2$$anon$4$$anonfun$get$1.apply(PetRepository.scala:40)",
+    "scala.Function1.$anonfun$andThen$1(Function1.scala:85)",
+    "map @ natchez.logodin.LogSpan$.$anonfun$child$3(LogSpan.scala:151)",
+    "flatMap @ natchez.logodin.LogSpan$.$anonfun$child$2(LogSpan.scala:150)",
+    "flatMap @ natchez.logodin.LogSpan$.$anonfun$child$1(LogSpan.scala:149)",
+    "flatMap @ natchez.logodin.LogSpan$.child(LogSpan.scala:148)",
+    "makeCase @ natchez.logodin.Log$$anon$1.make(Log.scala:20)",
+    "use @ aop.Main$.program(Main.scala:31)",
+    "map @ natchez.logodin.LogSpan$.$anonfun$finish$3(LogSpan.scala:135)",
+    "mapN @ natchez.logodin.LogSpan.json(LogSpan.scala:65)",
+    "mapN @ natchez.logodin.LogSpan.json(LogSpan.scala:65)"
+  ],
+  "children" : [
+    {
+      "name" : "PetRepository.create",
+      "service" : "app",
+      "timestamp" : "2021-02-10T17:08:03.950249Z",
+      "duration_ms" : 23,
+      "trace.span_id" : "959f3438-5429-4189-bdf0-c2e78b78f675",
+      "trace.parent_id" : "92149010-e2fc-43e6-a215-bbbd0f32427a",
+      "trace.trace_id" : "92149010-e2fc-43e6-a215-bbbd0f32427a",
+      "exit.case" : "completed",
+      "args.name" : "Pet1",
+      "args.age" : "10",
+      "result" : "()",
+      "children" : [
+      ]
+    },
+    {
+      "name" : "PetRepository.find",
+      "service" : "app",
+      "timestamp" : "2021-02-10T17:08:04.004768Z",
+      "duration_ms" : 2,
+      "trace.span_id" : "afa474e6-4800-4232-aa90-c1c0a56ef0e0",
+      "trace.parent_id" : "92149010-e2fc-43e6-a215-bbbd0f32427a",
+      "trace.trace_id" : "92149010-e2fc-43e6-a215-bbbd0f32427a",
+      "exit.case" : "completed",
+      "args.name" : "Pet1",
+      "result" : "Some(Pet { name = Pet1, age = 10 })",
+      "children" : [
+      ]
+    },
+    {
+      "name" : "PetRepository.create",
+      "service" : "app",
+      "timestamp" : "2021-02-10T17:08:04.007140Z",
+      "duration_ms" : 0,
+      "trace.span_id" : "0af6f000-88bd-40d8-b1e0-ddf87f0b6bf2",
+      "trace.parent_id" : "92149010-e2fc-43e6-a215-bbbd0f32427a",
+      "trace.trace_id" : "92149010-e2fc-43e6-a215-bbbd0f32427a",
+      "exit.case" : "completed",
+      "args.name" : "Pet3",
+      "args.age" : "15",
+      "result" : "()",
+      "children" : [
+      ]
+    },
+    {
+      "name" : "PetRepository.list",
+      "service" : "app",
+      "timestamp" : "2021-02-10T17:08:04.008374Z",
+      "duration_ms" : 1,
+      "trace.span_id" : "934fe7e6-7861-4324-8a90-869ba4739f50",
+      "trace.parent_id" : "92149010-e2fc-43e6-a215-bbbd0f32427a",
+      "trace.trace_id" : "92149010-e2fc-43e6-a215-bbbd0f32427a",
+      "exit.case" : "completed",
+      "result" : "List(Pet { name = Pet1, age = 10 }, Pet { name = Pet3, age = 15 })",
+      "children" : [
+      ]
+    },
+    {
+      "name" : "PetRepository.update",
+      "service" : "app",
+      "timestamp" : "2021-02-10T17:08:04.010755Z",
+      "duration_ms" : 1,
+      "trace.span_id" : "72bbe7b0-cc6d-48b0-8445-7eb1188fbd6d",
+      "trace.parent_id" : "92149010-e2fc-43e6-a215-bbbd0f32427a",
+      "trace.trace_id" : "92149010-e2fc-43e6-a215-bbbd0f32427a",
+      "exit.case" : "completed",
+      "args.name" : "Pet1",
+      "args.age" : "20",
+      "result" : "()",
+      "children" : [
+      ]
+    },
+    {
+      "name" : "PetRepository.get",
+      "service" : "app",
+      "timestamp" : "2021-02-10T17:08:04.012696Z",
+      "duration_ms" : 8,
+      "trace.span_id" : "49424664-2027-40d8-be11-8a1864711f89",
+      "trace.parent_id" : "92149010-e2fc-43e6-a215-bbbd0f32427a",
+      "trace.trace_id" : "92149010-e2fc-43e6-a215-bbbd0f32427a",
+      "exit.case" : "error",
+      "exit.error.class" : "java.lang.RuntimeException",
+      "exit.error.message" : "Pet Pet2 is not found",
+      "exit.error.stackTrace" : [
+        "aop.InMemoryPetRepository$$anonfun$make$2$$anon$4$$anonfun$get$1.apply(PetRepository.scala:42)",
+        "aop.InMemoryPetRepository$$anonfun$make$2$$anon$4$$anonfun$get$1.apply(PetRepository.scala:40)",
+        "scala.Function1.$anonfun$andThen$1(Function1.scala:85)",
+        "map @ natchez.logodin.LogSpan$.$anonfun$child$3(LogSpan.scala:151)",
+        "flatMap @ natchez.logodin.LogSpan$.$anonfun$child$2(LogSpan.scala:150)",
+        "flatMap @ natchez.logodin.LogSpan$.$anonfun$child$1(LogSpan.scala:149)",
+        "flatMap @ natchez.logodin.LogSpan$.child(LogSpan.scala:148)",
+        "makeCase @ natchez.logodin.Log$$anon$1.make(Log.scala:20)",
+        "use @ aop.Main$.program(Main.scala:31)",
+        "map @ natchez.logodin.LogSpan$.$anonfun$finish$3(LogSpan.scala:135)",
+        "mapN @ natchez.logodin.LogSpan.json(LogSpan.scala:65)",
+        "mapN @ natchez.logodin.LogSpan.json(LogSpan.scala:65)"
+      ],
+      "args.name" : "Pet2",
+      "children" : [
+      ]
+    }
+  ]
+}
